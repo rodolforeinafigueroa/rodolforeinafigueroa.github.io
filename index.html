@@ -1,13 +1,50 @@
 <!doctype html>
+<meta charset="utf-8">
 <html>
     <head>
+      <!--
+      Las siguientes lineas permiten que las nuevas etiquetas html5 puedan ser simuladas a traves de un javascript
+     -->
+      <!--[if lt IE 9]>
+        <script src="/js/html5shiv.js"></script>
+      <![endif]-->
         <title>Personal WebPage</title>
         <link type="text/plain" rel="author" href="https://rodolforeinafigueroa.github.io/web-page/" />
+        <link type="text/plain" rel="author" href="http://rodolforeinafigueroa.github.io/web-page/humans.txt" />
+        <script>document.createElement("titulo")</script>
+        <script>document.createElement("subtitulo")</script>
+        <style>
+         titulo{
+           display: block;
+           background: #d1e0e0;
+           padding: 10px;
+           font-size: 30px;
+         }
+         subtitulo{
+           display: block;
+           background: #d1e0e0;
+           padding: 5px;
+           font-size: 20px;
+         }
+         </style>
+
     </head>
     <body>
-        <h1>Personal WebPage</h1>
+        <titulo>Rodolfo Reina Figueroa</titulo>
+        <subtitulo>Pagina personal creada desde github</subtitulo>
+        <nav>
+          <a href="./c#/">C#</a>
+          <a href="./vb.net/">VB.Net</a>
+          <a href="./java/">Java</a>
+        </nav>
         <p>
             Pagina personal creada desde github
         </p>
     </body>
+    <footer>
+      <p>Creado por: Rodolfo Reina Figueroa</p>
+      <p>Información de contacto: <a href="mailto:rodolfo.reina@outlook.com">rodolfo.reina@outlook.com</a>.</p>
+      <p>Twitter: <a href="https://www.twitter.com/rodolforeina">@rodolforeina</a>.</p>
+
+    </footer>
 </html>
