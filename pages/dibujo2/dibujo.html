@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title></title>
   </head>
   <body>
-    <p>Prueba de dibujo usando ciclos <p>
+    <p>Prueba de dibujo usando ciclos </p>
+    <p>¿Cuanttas lineas quieres?
+      <br/>
+      Número de lineas: <input type="number" min="1" max="30" step="1" id="numLineas" />
+      <input type="button" value="Aceptar" id="btnAceptar" />
+      <br/>
+    </p>
     <canvas id="dibujo" height="300" width="300"></canvas>
 
     <script type="text/javascript" src="dibujo.js"> </script>
+
   </body>
 </html>
