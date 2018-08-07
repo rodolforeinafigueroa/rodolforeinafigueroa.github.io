@@ -2,24 +2,27 @@ var vObjCanvas = document.getElementById('dibujo');
 var vObjLienzo = vObjCanvas.getContext('2d');
 var vNumLineas = document.getElementById('numLineas');
 var vBtnAceptar = document.getElementById('btnAceptar');
+var vLngAnchoCanvas = vObjCanvas.width;
 
 vBtnAceptar.addEventListener("click", dibujoPorClick);
 
 function pintarCanvas(pvNumLineas)
 {
   limpiarCanvas();
-  for (var i = 0; i< pvNumLineas * 10;i = i + 10 )
+  var espaciado = vLngAnchoCanvas / pvNumLineas;
+
+  for (var i = 0; i< pvNumLineas * espaciado;i = i + espaciado )
   {
-    dibujarLinea('blue', 0, i, i + 10, 300);
-    dibujarLinea('red', i, 0, 300, i + 10);
-    dibujarLinea('green', i, 300, 300, 300 - (i + 10));
-    dibujarLinea('yellow', 300 - i, 0, 0, i + 10);
+    dibujarLinea('blue', 0, i, i + espaciado, vLngAnchoCanvas);
+    dibujarLinea('red', i, 0, vLngAnchoCanvas, i + espaciado);
+    dibujarLinea('green', i, vLngAnchoCanvas, vLngAnchoCanvas, vLngAnchoCanvas - (i + espaciado));
+    dibujarLinea('yellow', vLngAnchoCanvas - i, 0, 0, i + espaciado);
   }
 }
 
 function dibujoPorClick()
 {
-  if (vNumLineas.value > 0 && vNumLineas.value <= 30)
+  if (vNumLineas.value > 0 && vNumLineas.value <= 300)
   {
     pintarCanvas(vNumLineas.value);
   }
