@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Tu peso en lugar donde pesos menos</title>
+  </head>
+  <body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en Marte o Jupiter</p>
+    <script type="text/javascript">
+      var vStrPeroUsuario = prompt("¿Cual es tu peso?")
+      var vIntPlaneta = parseInt(prompt("¿Elige tu planeta\n1: Marte; 2: Jupiter"))
+      var vDblPeso = parseFloat(vStrPeroUsuario);
+      var vDBlGravedadTierra = 9.8;
+      var vDBlGravedadMarte = 3.7;
+      var vDBlGravedadJupiter = 24.8;
+      var vDblPesoFinal;
+      var vDblGravedadPlaneta = 0;
+      var vStrNombrePlaneta;
+
+      if (vIntPlaneta == 1)
+      {
+        vDblGravedadPlaneta = vDBlGravedadMarte;
+        vStrNombrePlaneta = 'Marte';
+      }
+      else if (vIntPlaneta == 2)
+      {
+        vDblGravedadPlaneta = vDBlGravedadJupiter;
+        vStrNombrePlaneta = 'Jupiter';
+      }
+      else
+      {
+        alert("Ha ingresado un valor invalido");
+      }
+
+      if (vDblGravedadPlaneta != 0 )
+      {
+        vDblPesoFinal = vDblPeso * vDblGravedadPlaneta / vDBlGravedadTierra;
+        vDblPesoFinal = vDblPesoFinal.toFixed(2);
+        document.write('<p>Tu peso en ' + vStrNombrePlaneta + ' es <strong>' + vDblPesoFinal +  ' Kilos</strong></p>');
+      }
+    </script>
+  </body>
+</html>
